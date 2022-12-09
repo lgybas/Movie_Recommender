@@ -4,8 +4,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-movies = pd.read_csv("movies.csv")
-ratings = pd.read_csv("ratings.csv")
+movies = pd.read_csv(r"movies.csv")
+ratings = pd.read_csv(r"ratings.csv")
 
 av_rating = pd.DataFrame(ratings.groupby("movieId").aggregate(
     {"rating": ["mean", "median", "count", "min", "max"]}
